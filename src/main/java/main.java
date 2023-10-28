@@ -1,21 +1,24 @@
+import java.util.ArrayList;
+
 public class main {
     public static void main(String[] args) {
-        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        // Creating a binary search tree
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 
-        tree.insert(1);
-        tree.insert(2);
-        tree.insert(3);
-        tree.insert(4);
-        tree.insert(5);
-        tree.insert(6);
-        tree.insert(7);
-        tree.insert(8);
-        tree.insert(9);
-        tree.insert(10);
-
+        // Inserting elements into the binary search tree
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        bst.insert(2);
+        bst.insert(4);
+        bst.insert(6);
+        bst.insert(8);
 
 
+        // Printing the binary search tree structure
         BinaryTreePrint treePrinter = new BinaryTreePrint();
-        treePrinter.printTree(tree.getRoot());
+        treePrinter.printTree(bst.getRoot());
+
+
     }
 }

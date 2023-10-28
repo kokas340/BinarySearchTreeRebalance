@@ -27,7 +27,7 @@ public class BinaryTreePrint   {
         BinaryTreeNode<Integer> current;
         boolean moreNodes = false;
         boolean firstNode = true;
-        BinaryTreeNode<Integer> dummy = new BinaryTreeNode(0);
+        BinaryTreeNode<Integer> dummy = new BinaryTreeNode();
 
         int dist = 0;
         System.out.println();

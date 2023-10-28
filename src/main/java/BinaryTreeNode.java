@@ -1,31 +1,26 @@
-class BinaryTreeNode<T extends Comparable<T>> {
-    private T data;
-    private BinaryTreeNode<T> left;
-    private BinaryTreeNode<T> right;
+class BinaryTreeNode<E extends Comparable<E>> {
+    private E element;
+    private BinaryTreeNode<E> left;
+    private BinaryTreeNode<E> right;
 
-    public BinaryTreeNode(T data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
+    public void setElement(E element){
+        this.element=element;
+    }
+    public E getElement(){
+        return  element;
     }
 
-    public T getElement() {
-        return data;
+    public void addLeftChild(BinaryTreeNode left){
+        this.left=left;
+    }
+    public void addRightChild(BinaryTreeNode right){
+        this.right=right;
+    }
+    public  BinaryTreeNode getLeftChild(){
+        return (left == null) ? null : left;
+    }
+    public  BinaryTreeNode getRightChild(){
+        return (right == null) ? null : right;
     }
 
-    public BinaryTreeNode<T> getLeftChild() {
-        return left;
-    }
-
-    public BinaryTreeNode<T> getRightChild() {
-        return right;
-    }
-
-    public void setLeftChild(BinaryTreeNode<T> left) {
-        this.left = left;
-    }
-
-    public void setRightChild(BinaryTreeNode<T> right) {
-        this.right = right;
-    }
 }
