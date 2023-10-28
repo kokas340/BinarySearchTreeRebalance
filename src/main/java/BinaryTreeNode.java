@@ -1,4 +1,4 @@
-public class BinaryTreeNode<T> {
+class BinaryTreeNode<T extends Comparable<T>> {
     private T data;
     private BinaryTreeNode<T> left;
     private BinaryTreeNode<T> right;
@@ -9,22 +9,23 @@ public class BinaryTreeNode<T> {
         this.right = null;
     }
 
-    public BinaryTreeNode getLeftChild() {
+    public T getElement() {
+        return data;
+    }
+
+    public BinaryTreeNode<T> getLeftChild() {
         return left;
     }
-    public BinaryTreeNode getRightChild() {
+
+    public BinaryTreeNode<T> getRightChild() {
         return right;
     }
 
-    public void setLeftChild(BinaryTreeNode<T> leftChild){
-        this.left=leftChild;
-    }
-    public void setRightChild(BinaryTreeNode<T> rightChild){
-        this.right=rightChild;
+    public void setLeftChild(BinaryTreeNode<T> left) {
+        this.left = left;
     }
 
-
-    public int getElement() {
-        return (int) data;
+    public void setRightChild(BinaryTreeNode<T> right) {
+        this.right = right;
     }
 }
