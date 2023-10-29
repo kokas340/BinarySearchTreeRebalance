@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
-    private BinaryTreeNode<E> root;
+
 
     public boolean insert(E element) {
         setRoot(insertElement(getRoot(), element));
@@ -85,27 +85,38 @@ class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
     }
 
     public E findMin(){
-        BinaryTreeNode<E> current = root;
+        BinaryTreeNode<E> current = getRoot();
+
         while (current.getLeftChild() != null) {
             current = current.getLeftChild();
         }
         return current.getElement();
     }
     public E findMax(){
-        BinaryTreeNode<E> current = root;
+        BinaryTreeNode<E> current = getRoot();
         while (current.getRightChild() != null) {
-            current = current.getLeftChild();
+            current = current.getRightChild();
         }
         return current.getElement();
     }
 
     public boolean contains(E element) {
-        return containsElement(root, element);
+        return containsElement(getRoot(), element);
     }
+
     private boolean containsElement(BinaryTreeNode<E> node, E target) {
         if (node == null) {
             return false;
         }
+
+        // Handle null values in comparison
+        if (target == null && node.getElement() == null) {
+            return true;
+        } else if (target == null || node.getElement() == null) {
+            // One of the elements is null, but not both
+            return false;
+        }
+
         int comparisonResult = target.compareTo(node.getElement());
 
         if (comparisonResult < 0) {
@@ -113,9 +124,11 @@ class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         } else if (comparisonResult > 0) {
             return containsElement(node.getRightChild(), target);
         } else {
+            // Elements are equal
             return true;
         }
     }
+
 
 
     public void rebalanceAndPrint() {

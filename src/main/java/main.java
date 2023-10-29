@@ -1,11 +1,8 @@
-import java.util.ArrayList;
+
 
 public class main {
     public static void main(String[] args) {
         // Creating a binary search tree
-
-
-
 
      BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 
@@ -30,5 +27,9 @@ public class main {
 
         bst.rebalanceAndPrint();
 
+        System.out.println("\n ");
+        System.out.println("FIND MIN VALUE -> "+bst.findMin());
+        System.out.println("FIND Max VALUE -> "+bst.findMax());
+       System.out.println("FIND VALUE -> "+bst.contains(8));
     }
 }
