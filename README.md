@@ -8,7 +8,8 @@ This project includes the following components:
 
 1. **BinarySearchTree**: Represents a binary search tree. Provides methods for insertion, traversal, and rebalancing.
 2. **BinaryTreeNode**: Represents a node in the binary search tree. Contains an element, left child, and right child.
-3. **BinaryTreePrint**: Utility class for printing the binary tree structure.
+3. **BinaryTree**: Represents a basic binary tree structure. Contains nodes and basic tree operations.
+4. **BinaryTreePrint**: Utility class for printing the binary tree structure.
 
 ## Functionality
 
