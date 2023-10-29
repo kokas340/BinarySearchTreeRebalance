@@ -24,12 +24,12 @@ public class main {
 
         System.out.println("\n \n                                   --------------REMOVING ELEMENTS----------------");
         bst.removeElement(6);
-
+       bst.removeElement(11);
         bst.rebalanceAndPrint();
 
         System.out.println("\n ");
         System.out.println("FIND MIN VALUE -> "+bst.findMin());
         System.out.println("FIND Max VALUE -> "+bst.findMax());
-       System.out.println("FIND VALUE -> "+bst.contains(8));
+       System.out.println("Contains VALUE 8-> "+bst.contains(8));
     }
 }
