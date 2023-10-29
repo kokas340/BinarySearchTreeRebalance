@@ -15,18 +15,13 @@ This project includes the following components:
 ### 1. Insertion
 - Use the `BinarySearchTree` class to insert elements into the binary search tree.
 
-### 2. In-Order Traversal
-- Traverse the binary search tree in in-order (left, root, right) to collect elements.
-
-### 3. Rebalancing
+### 2. Rebalancing
 - Utilize the collected elements to rebalance the binary search tree.
 - The `rebalance()` method in the `BinarySearchTree` class performs the rebalancing operation.
 
-### 4. Printing Tree Structure
+### 3. Printing Tree Structure
 - The `BinaryTreePrint` class provides a utility to print the tree structure.
 - The rebalanced tree structure can be visualized using the `printTree()` method.
 
-## How to Use
 
-1. **Clone the Repository:**
 
