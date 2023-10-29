@@ -7,7 +7,7 @@ class BinaryTreeNode<E extends Comparable<E>> {
         this.element=element;
     }
     public E getElement(){
-        return  element;
+        return element;
     }
 
     public void addLeftChild(BinaryTreeNode left){

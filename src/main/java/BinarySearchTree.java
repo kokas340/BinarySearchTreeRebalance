@@ -118,11 +118,18 @@ class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
     }
 
 
-    public void rebalance() {
+    public void rebalanceAndPrint() {
         List<E> elements = new ArrayList<>();
         collectElementsInOrder(getRoot(), elements);
         setRoot(sortedListToBST(elements, 0, elements.size() - 1));
+
+        // Print the balanced tree
+        BinaryTreePrint printer = new BinaryTreePrint();
+        printer.printTree(getRoot());
     }
+
+
+
 
     private void collectElementsInOrder(BinaryTreeNode<E> node, List<E> elements) {
         if (node != null) {
